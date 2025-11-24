@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scan2eat- Ingredient Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>scan2eat</h1>
+            <p class="tagline">Make smarter and healthier food choices by using scan2eat to check the ingredients and their score</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <h2>Search Product</h2>
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Enter product name or barcode"
+                    autocomplete="off"
+                >
+                <button id="searchBtn">Search</button>
+            </div>
+            <div id="errorMessage" class="error-message"></div>
+            <div id="loadingIndicator" class="loading">Searching...</div>
+        </section>
+
+        <section class="results-section" id="resultsSection">
+            <div class="filter-controls">
+                <h3>Filter Results</h3>
+                <div class="filter-group">
+                    <label for="sortSelect">Sort by:</label>
+                    <select id="sortSelect">
+                        <option value="relevance">Relevance</option>
+                        <option value="name-asc">Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                        <option value="nutriscore">Nutri-Score</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterInput">Filter products:</label>
+                    <input 
+                        type="text" 
+                        id="filterInput" 
+                        placeholder="Type to filter results"
+                    >
+                </div>
+            </div>
+
+            <div id="productList" class="product-list"></div>
+        </section>
+
+        <section class="details-section" id="detailsSection">
+            <button id="backBtn" class="back-btn">Back to Results</button>
+            <div id="productDetails" class="product-details"></div>
+        </section>
+    </main>
+
+     <section class="instructions-section">
+            <h3 class="instructions-title">How to Use</h3>
+            <ol class="instructions-list">
+                <li>
+                    <strong>1.</strong>
+                    <span>Type a product name or barcode into the search box, then press Enter or tap Search</span>
+                </li>
+                <li>
+                    <strong>2.</strong>
+                    <span>Scroll through the list of products and pick the one you are looking for.</span>
+                </li>
+                <li>
+                    <strong>3.</strong>
+                    <span>Open a product to see ingredients, nutrition facts, allergens, additives, and its nutriscore</span>
+                </li>
+                <li>
+                    <strong>4.</strong>
+                    <span>Use the information to quickly understand what is inside your food and choose healthier options.</span>
+                </li>
+            </ol>
+        </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
