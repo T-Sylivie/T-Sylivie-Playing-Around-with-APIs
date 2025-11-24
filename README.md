@@ -272,4 +272,7 @@ This project is for educational purposes as part of a web development assignment
 
 ## Contact
 
+
 For questions or issues, please open an issue in the GitHub repository.
+
+Link to web app: http://13.218.204.67/
